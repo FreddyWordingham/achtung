@@ -2,6 +2,12 @@
 
 Ask your other half for a little attention with a generated message.
 
+<p float="left">
+  <img src="./resources/splashscreen.png" width="30%" />
+  <img src="./resources/incoming.png" width="30%" /> 
+  <img src="./resources/noteification.png" width="30%" />
+</p>
+
 ## Dependencies
 
 1. The [Python3](https://www.python.org/downloads/) interpreter
