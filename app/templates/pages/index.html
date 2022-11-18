@@ -1,0 +1,46 @@
+{% extends "base.html" %} {% block content %}
+
+<style>
+    #wrapper {
+        width: 100%;
+        height: 100vh;
+        border-radius: 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        outline: solid 10px black;
+    }
+    body {
+        background-image: linear-gradient(#12d9cf, #4c69eb);
+    }
+    button {
+        background-image: linear-gradient(#df5c3e, #c00a65);
+        height: 130px;
+        width: 280px;
+    }
+</style>
+
+<div id="wrapper">
+    <button type="button" class="btn btn-danger" onclick="trigger()">
+        <h1>Achtung!</h1>
+    </button>
+</div>
+
+<script>
+    function trigger() {
+        $.ajax({
+            url: "/trigger",
+            type: "POST",
+            contentType: "application/json",
+            data: JSON.stringify({}),
+            success: () => {
+                window.location = "/coming";
+            },
+            error: () => {
+                alert("Request failed to send :(");
+            },
+        });
+    }
+</script>
+
+{% endblock %}
